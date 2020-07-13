@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>大眼猫科技</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- <link rel="stylesheet" href="css/style@ipad.css" media="screen and (max-width:768px)">
+    <link rel="stylesheet" href="css/style@3Xmedio.css" media="screen and (max-width:414px)">
+    <link rel="stylesheet" href="css/style@2Xmedio.css" media="screen and (max-width:375px)">
+    <link rel="stylesheet" href="css/style@1Xmedio.css" media="screen and (max-width:320px)"> -->
+</head>
+
+<body>
+    <div class="container">
+        <div class="top_nav">
+            <nav class="nav_box clearfix">
+                <div class="logo fl">
+                    <img src="images/logo.png" alt="">
+                </div>
+                <ul class="ul_r fr">
+                    <li>
+                        <a href="javascript:void(0)">首页</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">产品服务</a>
+                        <ul>
+                            <li><a href="javascript:void(0)">大眼猫与</a></li>
+                            <li><a href="javascript:void(0)">大眼猫呀</a></li>
+                            <li><a href="javascript:void(0)">大眼猫看</a></li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">科技研发</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">新闻中心</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">团队核心</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">关于我们</a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0)">联系我们</a>
+                    </li>
+                </ul>
+            </nav>
+            <!-- banner图 -->
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image:url('images/banner_one.png')">
+                        <div class="text_box">
+                            <p class="p_f">裸眼3D帮助儿童矫正视力</p>
+                            <p class="p_t">视力保健，呵护童真</p>
+                        </div>
+                    </div>
+                    <div class="swiper-slide" style="background-image:url('images/banner_two.png')"></div>
+                    <div class="swiper-slide" style="background-image:url('images/banner_three.png')"></div>
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination swiper-pagination-white"></div>
+                <!-- Add Arrows -->
+                <!-- <div class="swiper-button-next swiper-button-white"></div>
+            <div class="swiper-button-prev swiper-button-white"></div> -->
+            </div>
+            <!-- banner图 -->
+        </div>
+        <div class="company">
+
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="js/jquery-3.5.1.js"></script>
+<!-- Swiper JS -->
+<script src="js/swiper.js"></script>
+<script src="js/main.js"></script>
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        spaceBetween: 30,
+        effect: 'fade',
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+        navigation: {
+            nextEl: '.swiper-button-next',
+            prevEl: '.swiper-button-prev',
+        },
+    });
+</script>

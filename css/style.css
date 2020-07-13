@@ -1,0 +1,157 @@
+* {
+  padding: 0;
+  margin: 0; }
+
+.fl {
+  float: left; }
+
+.fr {
+  float: right; }
+
+li {
+  list-style: none; }
+
+.clearfix:after {
+  visibility: hidden;
+  display: block;
+  font-size: 0;
+  content: " ";
+  clear: both;
+  height: 0; }
+
+.clearfix {
+  *zoom: 1; }
+
+html,
+body {
+  position: relative;
+  height: 100%; }
+
+body {
+  background: #eee;
+  font-family: Helvetica Neue, Helvetica, Arial, sans-serif;
+  font-size: 14px;
+  color: #000;
+  margin: 0;
+  padding: 0; }
+
+.container {
+  width: 100%;
+  height: 100%; }
+  .container .nav_box {
+    width: 1200px;
+    height: 70px;
+    margin: 0 auto;
+    position: fixed;
+    z-index: 999;
+    top: 0;
+    left: 50%;
+    margin-left: -600px; }
+    .container .nav_box .logo {
+      width: 132px;
+      height: 30px; }
+    .container .nav_box .ul_r {
+      display: inline-block;
+      width: auto;
+      height: auto; }
+      .container .nav_box .ul_r > li {
+        list-style: none;
+        width: 125px;
+        height: 70px;
+        float: left;
+        position: relative; }
+        .container .nav_box .ul_r > li > a {
+          text-decoration: none;
+          text-align: center;
+          font-size: 18px;
+          line-height: 70px;
+          display: block;
+          width: 100%;
+          height: 70px;
+          color: #fff;
+          font-weight: 500; }
+          .container .nav_box .ul_r > li > a:hover {
+            color: #ED6D00; }
+        .container .nav_box .ul_r > li ul {
+          display: none; }
+          .container .nav_box .ul_r > li ul li {
+            list-style: none; }
+            .container .nav_box .ul_r > li ul li > a {
+              text-decoration: none;
+              text-align: center;
+              font-size: 18px;
+              line-height: 40px;
+              display: block;
+              width: 100%;
+              height: 40px;
+              color: #fff;
+              background-color: rgba(255, 255, 255, 0.45);
+              font-weight: 500;
+              margin-bottom: 1px; }
+              .container .nav_box .ul_r > li ul li > a:hover {
+                color: #ED6D00; }
+        .container .nav_box .ul_r > li:hover ul {
+          display: block; }
+          .container .nav_box .ul_r > li:hover ul li {
+            list-style: none; }
+            .container .nav_box .ul_r > li:hover ul li > a {
+              text-decoration: none;
+              text-align: center;
+              font-size: 18px;
+              line-height: 40px;
+              display: block;
+              width: 100%;
+              height: 40px;
+              color: #fff;
+              background-color: rgba(255, 255, 255, 0.45);
+              font-weight: 500;
+              margin-bottom: 1px; }
+              .container .nav_box .ul_r > li:hover ul li > a:hover {
+                color: #ED6D00; }
+        .container .nav_box .ul_r > li:hover > a:after {
+          content: '';
+          width: 100%;
+          height: 3px;
+          background-color: #ED6D00;
+          position: absolute;
+          bottom: 10px;
+          left: 0; }
+  .container .text_box {
+    width: 1200px;
+    height: 200px;
+    margin: 288px auto 0; }
+    .container .text_box .p_f {
+      font-size: 72px;
+      font-family: "Source Han Sans CN";
+      font-weight: 800;
+      color: white; }
+    .container .text_box .p_t {
+      font-size: 58px;
+      font-family: "Source Han Sans CN";
+      font-weight: 500;
+      font-style: italic;
+      color: white;
+      margin-left: 164px;
+      margin-bottom: 73px; }
+  .container .swiper-container {
+    width: 100%;
+    height: 980px; }
+  .container .swiper-slide {
+    background-position: center;
+    background-size: cover; }
+  .container .swiper-pagination-bullet {
+    width: 63px;
+    height: 6px;
+    background-color: #fff;
+    border-radius: 2px; }
+  .container .swiper-container-horizontal > .swiper-pagination-bullets,
+  .container .swiper-pagination-custom,
+  .container .swiper-pagination-fraction {
+    top: 633px;
+    left: 50%;
+    width: 1200px;
+    margin-left: -600px; }
+  .container .swiper-pagination {
+    text-align: left; }
+
+/*# sourceMappingURL=style.css.map */
