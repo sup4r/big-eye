@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>瀑布流布局</title>
+    <meta name='viewport' content='width=device-width,initial-scale=1.0,user-scalable=no' />
+    <style>
+        html {
+            font-size: 12px;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        
+        div.item {
+            transition: all .5s;
+            /*width : 200px;*/
+            height: auto;
+            padding: 5px;
+            box-sizing: border-box;
+        }
+        
+        .wrap {
+            column-width: 200px;
+            column-count: auto;
+            column-gap: 1rem;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="wrap" id='wrap'>
+
+    </div>
+    <script>
+        var imgUrls = [
+            'https://icweiliimg1.pstatp.com/weili/l/452540045247774720.webp',
+            'https://weiliicimg9.pstatp.com/weili/l/223888416044482620.webp',
+            'https://icweiliimg6.pstatp.com/weili/l/320841925450530819.webp',
+            'https://icweiliimg6.pstatp.com/weili/l/195564498297815041.webp',
+            'https://weiliicimg9.pstatp.com/weili/l/461972764095807490.webp',
+            'https://icweiliimg1.pstatp.com/weili/l/165755655736786957.webp',
+            'https://icweiliimg9.pstatp.com/weili/l/447251256884854785.webp',
+            'https://icweiliimg6.pstatp.com/weili/l/165755629970653210.webp',
+            'https://weiliicimg6.pstatp.com/weili/l/218593064967209016.webp',
+            'https://icweiliimg9.pstatp.com/weili/l/292051943627161624.webp',
+            'https://icweiliimg1.pstatp.com/weili/l/235158650747486283.webp',
+            'https://weiliicimg1.pstatp.com/weili/l/165755681505542155.webp',
+            'https://icweiliimg1.pstatp.com/weili/l/202821919289376781.webp',
+            'https://weiliicimg9.pstatp.com/weili/l/611415730252415145.webp'
+        ];
+
+        window.onload = function() {
+            let container = document.getElementById('wrap');
+
+            imgUrls.map((item, i) => {
+                let div = document.createElement('div');
+                div.className = 'item';
+
+                let img = document.createElement('img');
+                img.src = item;
+                img.style.width = '100%';
+                img.style.height = 'auto';
+
+                div.appendChild(img);
+                container.appendChild(div);
+            });
+        }
+    </script>
+</body>
+
+</html>
