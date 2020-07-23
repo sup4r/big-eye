@@ -6,19 +6,30 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>大眼猫</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <style>
+        .swiper-container {
+            width: 100%;
+            height: 100%;
+        }
+        
+        .swiper-slide {
+            background-position: center;
+            background-size: cover;
+        }
+    </style>
 </head>
 
 <body>
     <div class="contain">
         <div class="nav_bs">
             <nav class="clearfix">
-                <div class="logo_box">
+                <div class="logo_box fl">
                     <img src="images/logo.png" alt="大眼猫" class="logo">
                 </div>
-                <div class="nav_box">
+                <div class="nav_box fr">
                     <ul>
                         <li><a href="javascript:void(0)">首页<span class="h_a"></span></a>
-
                         </li>
                         <li><a href="javascript:void(0)">关于我们
                         <span class="h_a"></span></a>
@@ -42,24 +53,39 @@
                 </div> -->
             </nav>
         </div>
-        <div class="slice" style="height: 600px;background-color: red;margin-top:60px"></div>
+        <div class="slice" style="height: 700px;width: 100%;">
+            <!-- Swiper -->
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide" style="background-image:url(images/banner_1.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(images/banner_2.png)"></div>
+                    <div class="swiper-slide" style="background-image:url(images/banner_3.png)"></div>
+
+                </div>
+                <!-- Add Pagination -->
+                <div class="swiper-pagination swiper-pagination-white"></div>
+
+            </div>
+        </div>
         <div class="ly">
-            <h1>裸眼3D</h1>
-            <div class="ly_b">
-                <div class="ly_d">
-                    <img src="images/ly_one.png" alt="">
-                    <h2>什么是裸眼“3D”</h2>
-                    <p>所谓“裸眼3D”就是通过狭缝式液晶光栅、柱状透镜或方向式背光等技术，将视频终端行3D处理，(即电脑、手机)等的图像进以将这些终端呈现的图像无限接近肉眼所见的真实图像。</p>
-                </div>
-                <div class="ly_d">
-                    <img src="images/ly_two.png" alt="">
-                    <h2>看电影---帮助矫正视力</h2>
-                    <p> 经过3D电影矫正，一般程度的近视即可缓解，视力也会相应有所提高。这种矫正近视的3D电影，不但过程充满趣味性，也有很好的矫正效果。它刚刚在欧美国家流行，现在已经被引入中国。</p>
-                </div>
-                <div class="ly_d">
-                    <img src="images/ly_thr.png" alt="">
-                    <h2>裸眼3D“纠正”假近视？</h2>
-                    <p>在国外方面，有企业结合裸眼3D技术进行产品研发。以日本企业东芝医疗系统公司为例，其2014年就上市“医用裸眼3D显示器”与其CT搭配销售，主要设想用于脑外科手术及内窥镜手术等术前模拟。</p>
+            <div class="hl_box">
+                <h1>裸眼3D<span>Naked Eye</span></h1>
+                <div class="ly_b">
+                    <div class="ly_d">
+                        <img src="images/ly_one.png" alt="">
+                        <h2>什么是裸眼“3D”</h2>
+                        <p>所谓“裸眼3D”就是通过狭缝式液晶光栅、柱状透镜或方向式背光等技术，将视频终端行3D处理，(即电脑、手机)等的图像进以将这些终端呈现的图像无限接近肉眼所见的真实图像。</p>
+                    </div>
+                    <div class="ly_d">
+                        <img src="images/ly_two.png" alt="">
+                        <h2>看电影--帮助矫正视力</h2>
+                        <p> 经过3D电影矫正，一般程度的近视即可缓解，视力也会相应有所提高。这种矫正近视的3D电影，不但过程充满趣味性，也有很好的矫正效果。它刚刚在欧美国家流行，现在已经被引入中国。</p>
+                    </div>
+                    <div class="ly_d">
+                        <img src="images/ly_thr.png" alt="">
+                        <h2>裸眼3D“纠正”假近视？</h2>
+                        <p>在国外方面，有企业结合裸眼3D技术进行产品研发。以日本企业东芝医疗系统公司为例，其2014年就上市“医用裸眼3D显示器”与其CT搭配销售，主要设想用于脑外科手术及内窥镜手术等术前模拟。</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -69,7 +95,7 @@
                     <img src="images/nansha.png" alt="">
                 </div>
                 <div class="com_box fl">
-                    <h2>大眼猫医疗器械科技有限公司 </h2>
+                    <h2>大眼猫医疗器械科技有限公司 <i></i></h2>
                     <p>大眼猫医疗器械科技有限公司与云股传媒集团达成高度战略合作，成立至今，已经构建起集研发设计、智能制造与医疗应用为一体的裸眼3D和儿童视力矫正的全新高科技产业链，拥有全球顶尖的裸眼3D软硬件开发团队、3D内容制作团队。已建四川省南充市裸眼3D小屏生产基地、北京裸眼3D大屏生产基地。企业能够为客户提供一揽子精品完备性服务。</p>
                     <div class="com_i_b">
                         <img src="images/ns_one.png" alt="">
@@ -79,8 +105,62 @@
                 </div>
             </div>
         </div>
+        <div class="cx">
+            <h1>科技创新</h1>
+            <p>大眼猫医疗器械科技有限公司，拟建立一套行之有效的“商业应用反哺技术研发体系”，目前已经组建一批由优秀学科带头人领衔、学术水平高、创新能力强的科研团队，积极开展行业共性、关键性和前瞻性技术的研究开发，科研团队专家组成员承担了多项国家重点科技计划项目，攻克和突破了一系列基于裸眼3D“纠正”假近视，未来大量引入腔镜手术等技术方面的重大技术难题，形成了一批具有自主知识产权和世界先进水平的技术创新成果，获得多项国家和省部级科技进步奖。</p>
+            <a href="javascript:void(0)">查看更多 ></a>
+        </div>
+        <div class="ln">
+            <div class="ln_box">
+                <h1>产品理念<span>vision</span></h1>
+                <div class="ln_i_b">
+                    <div class="ip">
+                        <img src="images/jk.png" alt="">
+                        <p>关注健康</p>
+                    </div>
+                    <div class="ip">
+                        <img src="images/kj.png" alt="">
+                        <p>科技互联</p>
+                    </div>
+                    <div class="ip">
+                        <img src="images/bh.png" alt="">
+                        <p>
+                            视力保护
+                        </p>
+                    </div>
+                    <div class="ip">
+                        <img src="images/zl.png" alt="">
+                        <p>助力儿童</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="fot_box">
+                <span>版权所有@</span>
+                <span>大眼猫科技有限公司</span>
+                <span>粤ICP备XXXXX号</span>
+                <span>电话：020-123456789</span>
+            </div>
+        </div>
     </div>
 </body>
 
 </html>
 <script src="js/jquery-3.5.1.js"></script>
+<script src="js/swiper.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        spaceBetween: 0,
+        centeredSlides: true,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        }
+    });
+</script>
