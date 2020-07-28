@@ -20,6 +20,12 @@ a {
     text-decoration: none;
 }
 
+p:hover,
+h1:hover,
+h2:hover {
+    cursor: default;
+}
+
 .clearfix:after {
     visibility: hidden;
     display: block;
@@ -82,14 +88,14 @@ a {
                     font-weight: bold;
                     position: relative;
                     &:hover {
-                        color: #333;
+                        color: #1d2b66;
                         .h_a {
                             width: 160px;
                         }
                     }
                 }
                 .h_a {
-                    width: 0;
+                    width: 0px;
                     content: "";
                     position: absolute;
                     bottom: 3px;
@@ -170,7 +176,7 @@ a {
                         font-size: 18px;
                         line-height: 26px;
                         padding: 30px 10px;
-                        text-indent: 25px;
+                        text-indent: 34px;
                         text-align: left;
                     }
                     &:hover {
@@ -217,7 +223,7 @@ a {
             }
             p {
                 padding: 15px 20px;
-                text-indent: 25px;
+                text-indent: 34px;
                 font-size: 18px;
                 margin-top: 30px;
                 line-height: 30px;
@@ -252,7 +258,7 @@ a {
             color: #333;
             margin: 40px auto;
             text-align: left;
-            text-indent: 25px;
+            text-indent: 34px;
             color: #fff;
             padding: 10px 30px;
         }
@@ -359,6 +365,217 @@ a {
                 line-height: 50px;
                 color: #fff;
                 margin: 0 5px;
+            }
+        }
+    }
+    .about_box {
+        .bg_box {
+            width: 100%;
+            height: 350px;
+            background: url("../images/about_one.jpg") no-repeat center center;
+        }
+        .com_z_box {
+            padding: 70px 0;
+            background-color: rgba(244, 244, 244, 1);
+            .com_int {
+                width: 1200px;
+                height: auto;
+                margin: 0 auto;
+                h1 {
+                    margin-top: 50px;
+                    text-align: center;
+                    display: block;
+                    position: relative;
+                    span {
+                        font-size: 26px;
+                        color: #e9b300;
+                        margin-left: 10px;
+                    }
+                     :after {
+                        display: block;
+                        width: 450px;
+                        height: 1px;
+                        background-image: linear-gradient(to right, #e9b300, #fff);
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                    }
+                     :before {
+                        display: block;
+                        width: 450px;
+                        height: 1px;
+                        background-image: linear-gradient(to left, #e9b300, #fff);
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                    }
+                }
+                p {
+                    font-size: 18px;
+                    line-height: 40px;
+                    color: #333;
+                    margin: 40px auto;
+                    text-align: left;
+                    text-indent: 34px;
+                    color: #333;
+                    padding: 10px 30px;
+                }
+            }
+        }
+        .com_det {
+            width: 100%;
+            height: 400px;
+            background: url("../images/about_two.jpg") no-repeat center center;
+            .com_d_w {
+                width: 1200px;
+                height: 300px;
+                margin: 0 auto;
+                padding: 50px 0;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                justify-content: space-between;
+                .com_d_l {
+                    width: 825px;
+                    height: 300px;
+                    .lbl {
+                        width: 325px;
+                        height: 300px;
+                        background-color: #e9b300;
+                        text-align: center;
+                        img {
+                            margin-top: 50px;
+                        }
+                        p {
+                            font-size: 26px;
+                            line-height: 30px;
+                            color: #fff;
+                            text-align: center;
+                            margin-top: 30px;
+                        }
+                    }
+                    .lbr {
+                        width: 500px;
+                        height: 300px;
+                        background-color: #fff;
+                        padding: 50px 30px;
+                        box-sizing: border-box;
+                        text-align: center;
+                        h2 {
+                            font-size: 30px;
+                            line-height: 30px;
+                            text-align: center;
+                            display: inline-block;
+                            vertical-align: top;
+                            i {
+                                vertical-align: top;
+                                display: inline-block;
+                                width: 3px;
+                                height: 30px;
+                                background-color: #e9b300;
+                                margin-right: 10px;
+                            }
+                        }
+                        p {
+                            margin: 30px 0;
+                            font-size: 18px;
+                            line-height: 26px;
+                            text-indent: 34px;
+                            font-family: 'Microsoft Yahei';
+                            text-align: left;
+                        }
+                    }
+                }
+                .com_d_r {
+                    width: 350px;
+                    box-sizing: border-box;
+                    background-color: #fff;
+                    ul {
+                        li {
+                            list-style: none;
+                            width: 100%;
+                            height: 75px;
+                            font-size: 18px;
+                            line-height: 75px;
+                            text-align: center;
+                            color: #333;
+                            &:hover {
+                                cursor: pointer;
+                                background-color: #e9b300;
+                                color: #fff;
+                            }
+                        }
+                        .act {
+                            background-color: #f6f6f6;
+                        }
+                    }
+                }
+            }
+        }
+        .team_box {
+            padding: 50px 0;
+            background-color: rgba(244, 244, 244, 1);
+            .team {
+                width: 1200px;
+                height: auto;
+                margin: 0 auto;
+                h1 {
+                    margin-top: 50px;
+                    text-align: center;
+                    display: block;
+                    position: relative;
+                    span {
+                        font-size: 26px;
+                        color: #e9b300;
+                        margin-left: 10px;
+                    }
+                     :after {
+                        display: block;
+                        width: 450px;
+                        height: 1px;
+                        background-image: linear-gradient(to right, #e9b300, #fff);
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        right: 0;
+                    }
+                     :before {
+                        display: block;
+                        width: 450px;
+                        height: 1px;
+                        background-image: linear-gradient(to left, #e9b300, #fff);
+                        content: '';
+                        position: absolute;
+                        top: 50%;
+                        left: 0;
+                    }
+                }
+                .t_box {
+                    width: 100%;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: top;
+                    justify-content: space-between;
+                    .t_l_b {
+                        margin: 50px 0;
+                        width: 300px;
+                        height: auto;
+                        text-align: center;
+                        img {
+                            width: 300px;
+                            margin-top: 20px;
+                        }
+                        h2 {
+                            margin: 20px 0;
+                        }
+                        p {
+                            font-size: 16px;
+                            line-height: 24px;
+                        }
+                    }
+                }
             }
         }
     }
