@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大眼猫科技</title>
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="contain">
+        <div class="nav_bs">
+            <nav class="clearfix">
+                <div class="logo_box fl">
+                    <img src="images/logo.png" alt="大眼猫" class="logo">
+                </div>
+                <div class="nav_box fr">
+                    <ul>
+                        <li><a href="javascript:void(0)">首页<span class="h_a"></span></a>
+                        </li>
+                        <li><a href="javascript:void(0)">关于我们
+                        <span class="h_a"></span></a>
+                        </li>
+                        <li><a href="javascript:void(0)">产品中心
+                        <span class="h_a"></span></a>
+                        </li>
+                        <li><a href="javascript:void(0)">企业新闻
+                        <span class="h_a"></span></a>
+                        </li>
+                        <li><a href="javascript:void(0)">社会责任
+                        <span class="h_a"></span></a>
+                        </li>
+                        <li><a href="javascript:void(0)">联系我们
+                        <span class="h_a"></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="news_box">
+            <div class="bg_box">
+            </div>
+            <div class="intr_box">
+                <div class="intr_con">
+                    <h1>大眼猫新闻 <span>News</span></h1>
+                    <div class="new_lis">
+                        <!-- Swiper -->
+                        <div class="swiper-container">
+                            <div class="swiper-wrapper">
+                                <div class="swiper-slide">
+                                    <a href="javascript:void(0)" class="swi_li">
+                                        <h3>大眼猫校正仪亮相国际博览会</h3>
+                                        <p class="time_p">2020.07.24</p>
+                                        <img src="images/news/gjblh.jpg" alt="">
+                                        <p class="con_p">第五届中国（成都）智慧产业博览会由四川省互联网信息办公室、四川省科学技术协会、四川省贸促会共同主办。</p>
+                                    </a>
+                                </div>
+                                <div class="swiper-slide">Slide 2</div>
+                                <div class="swiper-slide">Slide 3</div>
+                                <div class="swiper-slide">Slide 4</div>
+                            </div>
+                            <!-- Add Pagination -->
+                            <div class="swiper-pagination"></div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="footer">
+            <div class="fot_box">
+                <span>版权所有@</span>
+                <span>大眼猫科技有限公司</span>
+                <span>粤ICP备XXXXX号</span>
+                <span>电话：020-123456789</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script src="js/swiper.js"></script>
+<!-- Initialize Swiper -->
+<script>
+    var swiper = new Swiper('.swiper-container', {
+        slidesPerView: 3,
+        spaceBetween: 30,
+        autoplay: {
+            delay: 2500,
+            disableOnInteraction: false,
+        },
+        centeredSlides: true,
+        loop: true,
+        pagination: {
+            el: '.swiper-pagination',
+            clickable: true,
+        },
+    });
+</script>
