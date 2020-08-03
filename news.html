@@ -18,15 +18,15 @@
                 </div>
                 <div class="nav_box fr">
                     <ul>
-                        <li><a href="javascript:void(0)">首页<span class="h_a"></span></a>
+                        <li><a href="index.html">首页<span class="h_a"></span></a>
                         </li>
-                        <li><a href="javascript:void(0)">关于我们
+                        <li><a href="about.html">关于我们
                         <span class="h_a"></span></a>
                         </li>
-                        <li><a href="javascript:void(0)">产品中心
+                        <li><a href="product.html">产品中心
                         <span class="h_a"></span></a>
                         </li>
-                        <li><a href="javascript:void(0)">企业新闻
+                        <li><a href="news.html">企业新闻
                         <span class="h_a"></span></a>
                         </li>
                         <li><a href="javascript:void(0)">社会责任
@@ -46,24 +46,21 @@
                 <div class="intr_con">
                     <h1>大眼猫新闻 <span>News</span></h1>
                     <div class="new_lis">
-                        <!-- Swiper -->
-                        <div class="swiper-container">
-                            <div class="swiper-wrapper">
-                                <div class="swiper-slide">
-                                    <a href="javascript:void(0)" class="swi_li">
-                                        <h3>大眼猫校正仪亮相国际博览会</h3>
-                                        <p class="time_p">2020.07.24</p>
-                                        <img src="images/news/gjblh.jpg" alt="">
-                                        <p class="con_p">第五届中国（成都）智慧产业博览会由四川省互联网信息办公室、四川省科学技术协会、四川省贸促会共同主办。</p>
-                                    </a>
-                                </div>
-                                <div class="swiper-slide">Slide 2</div>
-                                <div class="swiper-slide">Slide 3</div>
-                                <div class="swiper-slide">Slide 4</div>
+                        <!-- <div class="lis clearfix">
+                            <div class="time_li">
+                                <p class="ti_li_p"><i class="time_bg"></i><span>
+                                    2020-04-30</span></p>
                             </div>
-                            <!-- Add Pagination -->
-                            <div class="swiper-pagination"></div>
-                        </div>
+                            <div class="new_im">
+                                <img src="images/news/0430.png" alt="">
+                            </div>
+                            <div class="det_new">
+                                <p class="p_tit">乐普医疗新冠病毒抗体检测试剂盒入围出口“白名单”</p>
+                                <p class="p_cont">4月25日，就进一步规范医疗物资出口秩序，中华人民共和国商务部，海关总署及国家市场监督管理局联合发布第12号公告。</p>
+                                <a href="javascript:void(0)">查看更多 ></a>
+                            </div>
+                        </div> -->
+
                     </div>
                 </div>
 
@@ -81,21 +78,29 @@
 </body>
 
 </html>
-<script src="js/swiper.js"></script>
-<!-- Initialize Swiper -->
+<script src="js/jquery-3.5.1.js"></script>
 <script>
-    var swiper = new Swiper('.swiper-container', {
-        slidesPerView: 3,
-        spaceBetween: 30,
-        autoplay: {
-            delay: 2500,
-            disableOnInteraction: false,
-        },
-        centeredSlides: true,
-        loop: true,
-        pagination: {
-            el: '.swiper-pagination',
-            clickable: true,
-        },
-    });
+    $(function() {
+        $.get("json/data.json", function(res) {
+            const resData = res.data;
+            for (i = 0; i < resData.length; i++) {
+
+                const dom = `<div class="lis clearfix">
+                            <div class="time_li">
+                                <p class="ti_li_p"><i class="time_bg"></i><span>
+                                    ` + resData[i].time + `</span></p>
+                            </div>
+                            <div class="new_im">
+                                <img src="` + resData[i].img + `" alt="">
+                            </div>
+                            <div class="det_new">
+                                <p class="p_tit">` + resData[i].title + `</p>
+                                <p class="p_cont">` + resData[i].content + `</p>
+                                <a href="newsInfo.html?id=` + i + `">查看更多 ></a>
+                            </div>
+                        </div>`;
+                $(".new_lis").append(dom);
+            };
+        })
+    })
 </script>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>大眼猫科技</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <div class="contain">
+        <div class="nav_bs">
+            <nav class="clearfix">
+                <div class="logo_box fl">
+                    <img src="images/logo.png" alt="大眼猫" class="logo">
+                </div>
+                <div class="nav_box fr">
+                    <ul>
+                        <li><a href="index.html">首页<span class="h_a"></span></a>
+                        </li>
+                        <li><a href="about.html">关于我们
+                        <span class="h_a"></span></a>
+                        </li>
+                        <li><a href="product.html">产品中心
+                        <span class="h_a"></span></a>
+                        </li>
+                        <li><a href="news.html">企业新闻
+                        <span class="h_a"></span></a>
+                        </li>
+                        <li><a href="javascript:void(0)">社会责任
+                        <span class="h_a"></span></a>
+                        </li>
+                        <li><a href="javascript:void(0)">联系我们
+                        <span class="h_a"></span></a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+        <div class="news_info_box">
+            <div class="bg_box"></div>
+            <div class="news_box clearfix">
+                <div class="recom fl">
+                    <h3 class="pad_h3">推荐阅读</h3>
+                    <ul class="tj_list">
+                        <!-- <li>
+                            <a href="./news.html">
+                                    营销新关口，广告如何投放？
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./news.html">
+                                    营销新关口，广告如何投放？
+                            </a>
+                        </li>
+                        <li>
+                            <a href="./news.html">
+                                    营销新关口，广告如何投放？
+                            </a>
+                        </li> -->
+                    </ul>
+                </div>
+                <div class="new_con fl">
+                    <h1 id="dom_h1"></h1>
+                    <p id="dom_h" class="t-time"></p>
+                    <div id="contentNew" class="am-article">
+                        <div class="t-tool">
+                            <a href="" id="last">上一篇</a>
+                            <a href="./news.html">返回</a>
+                            <a href="" id="next">下一篇</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="footer">
+            <div class="fot_box">
+                <span>版权所有@</span>
+                <span>大眼猫科技有限公司</span>
+                <span>粤ICP备XXXXX号</span>
+                <span>电话：020-123456789</span>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
+<script type="text/javascript" src="js/jquery-3.5.1.js"></script>
+<script>
+    $(function() {
+        function getQueryVariable(variable) {
+            var query = window.location.search.substring(1);
+            var vars = query.split("&");
+            for (var i = 0; i < vars.length; i++) {
+                var pair = vars[i].split("=");
+                if (pair[0] == variable) {
+                    return pair[1];
+                }
+            }
+            return (false);
+        }
+        // const id = window.location.search;
+        const val = getQueryVariable("id");
+        $.get("./json/data.json", function(res) {
+            // 新闻内容和图片模块
+            const obj = res.data[val].data_new;
+            console.log(obj);
+            for (let key in obj) {
+                let rexp = /^p/;
+                let rexi = /^img/;
+                if (rexp.test(key)) {
+                    const dom_p = `<p>` + obj[key] + `</p>`;
+                    $(".t-tool").before(dom_p);
+                } else if (rexi.test(key)) {
+                    const dom_img = `<img src="` + obj[key] + `" alt="大眼猫科技">`;
+                    $(".t-tool").before(dom_img);
+                } else {
+                    const dom_h = `<h2><span>` + obj[key] + `</span></h2>`;
+                    $(".t-tool").before(dom_h);
+                }
+            }
+            // 时间模块
+            const newsTime = `发布时间： ` + res.data[val].time;
+            $("#dom_h").append(newsTime);
+            // 标题模块
+            const newsTitle = res.data[val].title;
+            $("#dom_h1").text(newsTitle);
+            // 上一篇
+            go("last", val);
+            // 下一篇
+            go("next", val);
+            // 推荐阅读
+            recommendRead(val);
+
+            function recommendRead(val) {
+                let newVal = parseInt(val);
+                if (newVal !== 0) {
+                    newVal -= 1;
+                } else {
+                    newVal = 0;
+                    $("#last").css("display", "none");
+                }
+                const four = newVal + 5;
+                const thr = newVal + 2;
+                // 从每周推文里面选
+                for (let i = newVal; i < four; i++) {
+                    let objData = res.data[i].title;
+                    // 获取时间戳
+                    let timestamp = Date.parse(new Date());
+                    let importNew = `<li><a href="./newsInfo.html?id=` + i + `&time=` + timestamp + `"><p>
+                                   ` + objData + `</p></a></li>`;
+                    $(".tj_list").append(importNew);
+                }
+
+            };
+        })
+
+        function go(action, val) {
+            let newVal = parseInt(val);
+            if (action == "last") {
+                if (newVal !== 0) {
+                    newVal -= 1;
+                } else {
+                    newVal = 0;
+                }
+                // 获取时间戳
+                let timestamp = Date.parse(new Date());
+                const urlLast = `./newsInfo.html?id=` + parseInt(newVal) + `&time=` + timestamp;
+
+                $("#last").attr("href", urlLast);
+            } else {
+                newVal += 1;
+                // 获取时间戳
+                let timestamp = Date.parse(new Date());
+                const urlNext = `./newsInfo.html?id=` + parseInt(newVal) + `&time=` + timestamp;
+                $("#next").attr("href", urlNext);
+            }
+        }
+
+
+    })
+</script>
