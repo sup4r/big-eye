@@ -538,7 +538,7 @@ h2:hover {
       text-align: center;
       font-weight: normal; }
 .contain .product_box .pp_bg {
-  background-color: #46cdcf; }
+  background-color: #bebebe; }
   .contain .product_box .pp_bg .slwt h1 {
     text-align: center;
     display: block;
@@ -880,5 +880,105 @@ h2:hover {
         .contain .news_info_box .news_box .new_con #contentNew .t-tool a:hover {
           color: #e9b300;
           border: 1px solid #e9b300; }
+.contain .duty_box .bg_box {
+  width: 100%;
+  height: 350px;
+  background: url("../images/dc_bg.png") no-repeat center center; }
+.contain .duty_box .duty_c {
+  width: 100%; }
+  .contain .duty_box .duty_c .dc {
+    width: 1200px;
+    height: auto;
+    margin: 70px auto; }
+    .contain .duty_box .duty_c .dc h1 {
+      text-align: center;
+      display: block;
+      position: relative; }
+      .contain .duty_box .duty_c .dc h1 span {
+        font-size: 26px;
+        color: #e9b300;
+        margin-left: 10px; }
+      .contain .duty_box .duty_c .dc h1 :after {
+        display: block;
+        width: 450px;
+        height: 1px;
+        background-image: linear-gradient(to right, #e9b300, #fff);
+        content: '';
+        position: absolute;
+        top: 50%;
+        right: 0; }
+      .contain .duty_box .duty_c .dc h1 :before {
+        display: block;
+        width: 450px;
+        height: 1px;
+        background-image: linear-gradient(to left, #e9b300, #fff);
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 0; }
+.contain .duty_box .cha_box .charity {
+  width: 1200px;
+  height: auto;
+  margin: 70px auto; }
+  .contain .duty_box .cha_box .charity h1 {
+    text-align: center;
+    display: block;
+    position: relative; }
+    .contain .duty_box .cha_box .charity h1 span {
+      font-size: 26px;
+      color: #e9b300;
+      margin-left: 10px; }
+    .contain .duty_box .cha_box .charity h1 :after {
+      display: block;
+      width: 450px;
+      height: 1px;
+      background-image: linear-gradient(to right, #e9b300, #fff);
+      content: '';
+      position: absolute;
+      top: 50%;
+      right: 0; }
+    .contain .duty_box .cha_box .charity h1 :before {
+      display: block;
+      width: 450px;
+      height: 1px;
+      background-image: linear-gradient(to left, #e9b300, #fff);
+      content: '';
+      position: absolute;
+      top: 50%;
+      left: 0; }
+  .contain .duty_box .cha_box .charity .cs_det {
+    padding: 70px 0 0; }
+    .contain .duty_box .cha_box .charity .cs_det img {
+      width: 500px;
+      height: auto; }
+    .contain .duty_box .cha_box .charity .cs_det .ch_p {
+      width: 700px;
+      box-sizing: border-box;
+      padding: 30px; }
+      .contain .duty_box .cha_box .charity .cs_det .ch_p p {
+        font-size: 22px;
+        line-height: 36px;
+        text-indent: 40px; }
+.contain .duty_box .duty_c .dc {
+  width: 1200px;
+  height: auto;
+  margin: 70px auto; }
+  .contain .duty_box .duty_c .dc .dc_det {
+    padding: 70px 0 0; }
+    .contain .duty_box .duty_c .dc .dc_det .dc_p {
+      width: 646px;
+      height: auto; }
+      .contain .duty_box .duty_c .dc .dc_det .dc_p p {
+        font-size: 30px;
+        line-height: 30px;
+        text-align: center;
+        margin-top: 40px; }
+      .contain .duty_box .duty_c .dc .dc_det .dc_p .contury {
+        font-size: 60px;
+        font-weight: bolder;
+        color: red;
+        margin-top: 180px; }
+    .contain .duty_box .duty_c .dc .dc_det img {
+      width: 554px; }
 
 /*# sourceMappingURL=style.css.map */
