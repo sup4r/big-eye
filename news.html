@@ -90,14 +90,17 @@
         // 分页功能
         $("#pagination1").pagination({
             currentPage: 1,
-            totalPage: 3,
+            totalPage: 4,
             callback: function(current) {
                 getData(current);
             }
         });
 
         function getData(num) {
-            $.get("json/data.json", function(res) {
+            // 获取时间戳
+            let timestamp = Date.parse(new Date());
+            const url = "json/data.json?time=" + timestamp;
+            $.get(url, function(res) {
                 $("#pages").html(' ');
                 let i = (num - 1) * 3;
                 let j = i + 3;
