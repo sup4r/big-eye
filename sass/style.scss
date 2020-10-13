@@ -1196,6 +1196,9 @@ h2:hover {
                             padding: 5px 0;
                             &:hover {
                                 color: #e9b300;
+                                p {
+                                    cursor: pointer;
+                                }
                             }
                         }
                     }

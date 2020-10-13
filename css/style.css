@@ -974,6 +974,8 @@ h2:hover {
           padding: 5px 0; }
           .contain .news_info_box .news_box .recom .tj_list li a:hover {
             color: #e9b300; }
+            .contain .news_info_box .news_box .recom .tj_list li a:hover p {
+              cursor: pointer; }
   .contain .news_info_box .news_box .new_con {
     width: 800px;
     height: auto;
