@@ -82,10 +82,9 @@
 </html>
 <script src="js/jquery-3.5.1.js"></script>
 <script src="js/jquery.pagination.min.js"></script>
-
+<script src="js/index.js"></script>
 <script>
     $(function() {
-
         getData(1);
         // 分页功能
         $("#pagination1").pagination({
@@ -96,37 +95,5 @@
             }
         });
 
-        function getData(num) {
-            // 获取时间戳
-            let timestamp = Date.parse(new Date());
-            const url = "json/data.json?time=" + timestamp;
-            $.get(url, function(res) {
-                $("#pages").html(' ');
-                let i = (num - 1) * 3;
-                let j = i + 3;
-                // 获取时间戳
-                let timestamp = Date.parse(new Date());
-                const resData = res.data;
-                for (i; i < j; i++) {
-
-                    const dom = `<div class="lis clearfix">
-                            <div class="time_li">
-                                <p class="ti_li_p"><i class="time_bg"></i><span>
-                                    ` + resData[i].time + `</span></p>
-                            </div>
-                            <div class="new_im">
-                                <img src="` + resData[i].img + `" alt="">
-                            </div>
-                            <div class="det_new">
-                                <p class="p_tit">` + resData[i].title + `</p>
-                                <p class="p_cont">` + resData[i].content + `</p>
-                                <a href="newsInfo.html?id=` + i + `&time=` + timestamp + `">查看更多 ></a>
-                            </div>
-                        </div>`;
-                    $("#pages").append(dom);
-                };
-            })
-
-        }
     })
 </script>
