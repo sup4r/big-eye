@@ -1016,7 +1016,9 @@ h2:hover {
       .contain .news_info_box .news_box .new_con #contentNew p {
         text-indent: 25px;
         text-align: left;
-        margin: 15px 0; }
+        margin: 15px 0;
+        font-size: 16px;
+        line-height: 26px; }
       .contain .news_info_box .news_box .new_con #contentNew .t-tool a {
         display: inline-block;
         border-radius: 8px;
