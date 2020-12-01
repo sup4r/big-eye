@@ -58,16 +58,43 @@ h2:hover {
   display: inline-block;
   margin-left: 133px;
   vertical-align: top; }
-  .contain .nav_box ul {
+  .contain .nav_box .nav_ul {
     display: block;
     width: 940px;
-    padding: 0 10px; }
-    .contain .nav_box ul li {
+    padding: 0 10px;
+    position: relative; }
+    .contain .nav_box .nav_ul dl {
+      width: 940px;
+      height: 3px;
+      position: absolute;
+      bottom: 3px;
+      left: 10px; }
+      .contain .nav_box .nav_ul dl .solid {
+        width: 156px;
+        height: 3px;
+        background-color: #e9b300; }
+      .contain .nav_box .nav_ul dl .solid {
+        position: absolute;
+        left: 0;
+        top: 0;
+        transition: all 0.5s; }
+    .contain .nav_box .nav_ul li {
       display: inline-block;
       width: 156px;
       height: 60px;
-      overflow: hidden; }
-      .contain .nav_box ul li a {
+      position: relative; }
+      .contain .nav_box .nav_ul li:hover .posi_ul {
+        display: block; }
+      .contain .nav_box .nav_ul li .posi_ul {
+        display: none;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0; }
+        .contain .nav_box .nav_ul li .posi_ul li {
+          background-color: rgba(255, 255, 255, 0.8);
+          margin-top: 1px; }
+      .contain .nav_box .nav_ul li a {
         display: block;
         text-align: center;
         line-height: 60px;
@@ -75,21 +102,8 @@ h2:hover {
         color: #333;
         font-weight: bold;
         position: relative; }
-        .contain .nav_box ul li a:hover {
+        .contain .nav_box .nav_ul li a:hover {
           color: #e9b300; }
-          .contain .nav_box ul li a:hover .h_a {
-            width: 160px; }
-      .contain .nav_box ul li .h_a {
-        width: 0;
-        content: "";
-        position: absolute;
-        bottom: 3px;
-        left: 0;
-        display: block;
-        background-color: #e9b300;
-        height: 3px;
-        transition: width 0.5s;
-        -webkit-transition: width 0.5s; }
 .contain .change_lan {
   display: inline-block;
   vertical-align: top; }
@@ -114,7 +128,7 @@ h2:hover {
         width: 450px;
         height: 1px;
         background-image: linear-gradient(to right, #e9b300, #fff);
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         right: 0; }
@@ -123,7 +137,7 @@ h2:hover {
         width: 450px;
         height: 1px;
         background-image: linear-gradient(to left, #e9b300, #fff);
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         left: 0; }
@@ -258,7 +272,7 @@ h2:hover {
         width: 450px;
         height: 1px;
         background-image: linear-gradient(to right, #e9b300, #fff);
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         right: 0; }
@@ -267,7 +281,7 @@ h2:hover {
         width: 450px;
         height: 1px;
         background-image: linear-gradient(to left, #e9b300, #fff);
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         left: 0; }
@@ -287,7 +301,7 @@ h2:hover {
         .contain .ln .ln_box .ln_i_b .ip img {
           width: 100%;
           height: auto;
-          transition: all .5s; }
+          transition: all 0.5s; }
         .contain .ln .ln_box .ln_i_b .ip:hover {
           cursor: pointer; }
           .contain .ln .ln_box .ln_i_b .ip:hover img {
@@ -332,7 +346,7 @@ h2:hover {
         width: 450px;
         height: 1px;
         background-image: linear-gradient(to right, #e9b300, #fff);
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         right: 0; }
@@ -341,7 +355,7 @@ h2:hover {
         width: 450px;
         height: 1px;
         background-image: linear-gradient(to left, #e9b300, #fff);
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         left: 0; }
@@ -408,7 +422,7 @@ h2:hover {
           font-size: 18px;
           line-height: 26px;
           text-indent: 34px;
-          font-family: 'Microsoft Yahei';
+          font-family: "Microsoft Yahei";
           text-align: left; }
     .contain .about_box .com_det .com_d_w .com_d_r {
       width: 350px;
@@ -448,7 +462,7 @@ h2:hover {
         width: 450px;
         height: 1px;
         background-image: linear-gradient(to right, #e9b300, #fff);
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         right: 0; }
@@ -457,7 +471,7 @@ h2:hover {
         width: 450px;
         height: 1px;
         background-image: linear-gradient(to left, #e9b300, #fff);
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         left: 0; }
@@ -499,7 +513,7 @@ h2:hover {
         width: 450px;
         height: 1px;
         background-image: linear-gradient(to right, #e9b300, #fff);
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         right: 0; }
@@ -508,7 +522,7 @@ h2:hover {
         width: 450px;
         height: 1px;
         background-image: linear-gradient(to left, #e9b300, #fff);
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         left: 0; }
@@ -595,7 +609,7 @@ h2:hover {
         width: 450px;
         height: 1px;
         background-image: linear-gradient(to right, #e9b300, #fff);
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         right: 0; }
@@ -604,7 +618,7 @@ h2:hover {
         width: 450px;
         height: 1px;
         background-image: linear-gradient(to left, #e9b300, #fff);
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         left: 0; }
@@ -641,7 +655,7 @@ h2:hover {
       width: 400px;
       height: 1px;
       background-image: linear-gradient(to right, #e9b300, #fff);
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       right: 0; }
@@ -650,7 +664,7 @@ h2:hover {
       width: 400px;
       height: 1px;
       background-image: linear-gradient(to left, #e9b300, #fff);
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       left: 0; }
@@ -679,7 +693,7 @@ h2:hover {
   background: url(../images/cir_bg.png) no-repeat center center;
   position: relative; }
   .contain .product_box .tran_box .tran {
-    width: 1200PX;
+    width: 1200px;
     height: 600px;
     position: absolute;
     margin: auto;
@@ -804,7 +818,7 @@ h2:hover {
         width: 400px;
         height: 1px;
         background-image: linear-gradient(to right, #e9b300, #fff);
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         right: 0; }
@@ -813,7 +827,7 @@ h2:hover {
         width: 400px;
         height: 1px;
         background-image: linear-gradient(to left, #e9b300, #fff);
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         left: 0; }
@@ -867,7 +881,7 @@ h2:hover {
         width: 450px;
         height: 1px;
         background-image: linear-gradient(to right, #e9b300, #fff);
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         right: 0; }
@@ -876,7 +890,7 @@ h2:hover {
         width: 450px;
         height: 1px;
         background-image: linear-gradient(to left, #e9b300, #fff);
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         left: 0; }
@@ -885,7 +899,7 @@ h2:hover {
       .contain .news_box .intr_box .intr_con .new_lis .lis {
         background-color: #fff;
         padding: 30px 30px 25px;
-        border-bottom: 1px solid #E6E6E6; }
+        border-bottom: 1px solid #e6e6e6; }
         .contain .news_box .intr_box .intr_con .new_lis .lis .time_li {
           width: 15%;
           float: left; }
@@ -894,7 +908,7 @@ h2:hover {
             vertical-align: middle;
             font-size: 16px;
             line-height: 16px;
-            color: #BAC4CA; }
+            color: #bac4ca; }
           .contain .news_box .intr_box .intr_con .new_lis .lis .time_li .time_bg {
             display: inline-block;
             vertical-align: middle;
@@ -951,7 +965,7 @@ h2:hover {
       padding-left: 10px; }
       .contain .news_info_box .news_box .recom .pad_h3:after {
         position: absolute;
-        content: '';
+        content: "";
         display: block;
         width: 4px;
         height: 24px;
@@ -1008,7 +1022,7 @@ h2:hover {
             position: absolute;
             top: 3px;
             left: -10px;
-            content: '';
+            content: "";
             display: block;
             width: 4px;
             height: 24px;
@@ -1060,7 +1074,7 @@ h2:hover {
         width: 450px;
         height: 1px;
         background-image: linear-gradient(to right, #e9b300, #fff);
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         right: 0; }
@@ -1069,7 +1083,7 @@ h2:hover {
         width: 450px;
         height: 1px;
         background-image: linear-gradient(to left, #e9b300, #fff);
-        content: '';
+        content: "";
         position: absolute;
         top: 50%;
         left: 0; }
@@ -1090,7 +1104,7 @@ h2:hover {
       width: 450px;
       height: 1px;
       background-image: linear-gradient(to right, #e9b300, #fff);
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       right: 0; }
@@ -1099,7 +1113,7 @@ h2:hover {
       width: 450px;
       height: 1px;
       background-image: linear-gradient(to left, #e9b300, #fff);
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       left: 0; }
@@ -1158,7 +1172,7 @@ h2:hover {
       width: 450px;
       height: 1px;
       background-image: linear-gradient(to right, #e9b300, #fff);
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       right: 0; }
@@ -1167,7 +1181,7 @@ h2:hover {
       width: 450px;
       height: 1px;
       background-image: linear-gradient(to left, #e9b300, #fff);
-      content: '';
+      content: "";
       position: absolute;
       top: 50%;
       left: 0; }
@@ -1215,5 +1229,93 @@ h2:hover {
           height: 20px;
           background: url("../images/email.png") no-repeat center;
           background-size: contain; }
+.contain .vedio_box .bg_box {
+  width: 100%;
+  height: 500px;
+  background: url("../images/ved_bg.png") no-repeat center center; }
+.contain .vedio_box .ved_box {
+  width: 1200px;
+  height: auto;
+  padding: 50px 0;
+  margin: 0 auto; }
+  .contain .vedio_box .ved_box h1 {
+    margin-top: 50px;
+    text-align: center;
+    display: block;
+    position: relative; }
+    .contain .vedio_box .ved_box h1 span {
+      font-size: 26px;
+      color: #e9b300;
+      margin-left: 10px; }
+    .contain .vedio_box .ved_box h1 :after {
+      display: block;
+      width: 450px;
+      height: 1px;
+      background-image: linear-gradient(to right, #e9b300, #fff);
+      content: "";
+      position: absolute;
+      top: 50%;
+      right: 0; }
+    .contain .vedio_box .ved_box h1 :before {
+      display: block;
+      width: 450px;
+      height: 1px;
+      background-image: linear-gradient(to left, #e9b300, #fff);
+      content: "";
+      position: absolute;
+      top: 50%;
+      left: 0; }
+  .contain .vedio_box .ved_box .ve_det {
+    width: 100%;
+    height: auto;
+    padding-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+    .contain .vedio_box .ved_box .ve_det .li_de {
+      width: 350px;
+      height: 480px;
+      padding: 0 25px; }
+      .contain .vedio_box .ved_box .ve_det .li_de h3 {
+        text-align: center; }
+      .contain .vedio_box .ved_box .ve_det .li_de p {
+        margin-top: 15px;
+        text-indent: 28px;
+        font-size: 14px;
+        line-height: 20px;
+        padding: 0 5px; }
+      .contain .vedio_box .ved_box .ve_det .li_de ul {
+        overflow: hidden;
+        margin-top: 10px; }
+        .contain .vedio_box .ved_box .ve_det .li_de ul span {
+          font-size: 16px;
+          line-height: 20px; }
+        .contain .vedio_box .ved_box .ve_det .li_de ul li:first-child {
+          margin-left: 5px;
+          float: left; }
+        .contain .vedio_box .ved_box .ve_det .li_de ul li:last-child {
+          margin-right: 5px;
+          float: right; }
+      .contain .vedio_box .ved_box .ve_det .li_de img {
+        width: 340px;
+        height: auto;
+        display: block;
+        margin: 10px auto; }
+      .contain .vedio_box .ved_box .ve_det .li_de .downl a {
+        color: #7e7979;
+        margin: 25px 5px;
+        width: 120px;
+        height: 30px;
+        text-align: center;
+        font-size: 16px;
+        line-height: 30px;
+        border: 1px solid #7e7979;
+        display: block;
+        border-radius: 10px; }
+        .contain .vedio_box .ved_box .ve_det .li_de .downl a:hover {
+          color: #FFF;
+          border: 1px solid #e9b300;
+          background-color: #e9b300; }
 
 /*# sourceMappingURL=style.css.map */
