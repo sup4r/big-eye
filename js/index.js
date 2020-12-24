@@ -31,6 +31,41 @@ function getData(num) {
     })
 
 }
+// video.html
+function getVideo(num) {
+    // 获取时间戳
+    let timestamp = Date.parse(new Date());
+    const url = "json/video.json?time=" + timestamp;
+    $.get(url, function (res) {
+        $("#ve_det").html(' ');
+        let i = (num - 1) * 6;
+        let j = i + 6;
+
+        const resData = res.data;
+        for (i; i < j; i++) {
+            const dom = `<div class="li_de">
+            <h3>`+ resData[i].title +`</h3>
+            <p>`+resData[i].content+`</p>
+            <ul>
+                <li>
+                    <span>时间：</span>
+                    <span>`+resData[i].time+`</span>
+                </li>
+                <li>
+                    <span>视频大小：</span>
+                    <span>`+resData[i].size+`</span>
+                </li>
+            </ul>
+            <img src="`+resData[i].image+`" alt="">
+            <div class="downl">
+                <a href="`+resData[i].url+`" download="`+resData[i].url+`">点击下载</a>
+            </div>
+        </div>`;
+            $("#ve_det").append(dom);
+        };
+    })
+
+}
 // newsInfo.html
 function getQueryVariable(variable) {
     var query = window.location.search.substring(1);
